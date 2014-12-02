@@ -3,8 +3,8 @@ module Library where
 import System.Environment (getArgs)
 
 class Monad m => SystemMonad m where
-	getArgs :: m [String]
-	putStrLn :: String -> m ()
+  getArgs :: m [String]
+  putStrLn :: String -> m ()
 
 instance SystemMonad IO where
   getArgs = System.Environment.getArgs
